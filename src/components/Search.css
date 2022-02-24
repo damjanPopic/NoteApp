@@ -1,0 +1,17 @@
+.search-container {
+  width: 100rem;
+  margin: 0 auto;
+}
+
+.search-container input {
+  width: inherit;
+  padding: 3.2rem 1.6rem;
+  border: 4px solid green;
+  border-radius: 12px;
+  background-color: #e8e8e8;
+  outline: none;
+}
+
+.search-container input:focus {
+  outline: none;
+}
