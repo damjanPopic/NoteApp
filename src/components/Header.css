@@ -1,0 +1,28 @@
+.container {
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9.6rem;
+  width: 100rem;
+  margin: 0 auto;
+}
+
+.secondary-heading {
+  font-size: 3.6rem;
+  font-weight: 600;
+}
+
+.secondary-heading span {
+  color: green;
+}
+
+.toggle-btn {
+  padding: 0.8rem;
+  border-radius: 150px;
+  border: 5px solid green;
+  cursor: pointer;
+}
