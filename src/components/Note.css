@@ -1,0 +1,33 @@
+.note-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem;
+  gap: 11.45rem;
+  background-color: #40bc94;
+  border-radius: 10px;
+  background-image: linear-gradient(#40bc94, #09a360);
+}
+
+.note-text {
+  color: black;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.note-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-flex-container p {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.delete-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  border: 3px solid green;
+  cursor: pointer;
+}

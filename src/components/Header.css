@@ -17,12 +17,17 @@
 }
 
 .secondary-heading span {
-  color: green;
+  color: #09a360;
 }
 
 .toggle-btn {
   padding: 0.8rem;
   border-radius: 150px;
-  border: 5px solid green;
+  border: 3px solid #09a360;
   cursor: pointer;
+  transition: all 0.3s;
+}
+
+.toggle-btn:hover {
+  background: #40bc94;
 }
