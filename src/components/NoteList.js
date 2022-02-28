@@ -19,8 +19,8 @@ const NoteList = ({ items, onAddNote, onRemoveNote }) => {
         <Note
           key={item.id}
           item={item}
-          text={item.text}
-          date={item.date}
+          /* text={item.text}
+          date={item.date} */
           onRemoveNote={onRemoveNote}
         />
       ))}

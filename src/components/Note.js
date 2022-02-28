@@ -1,11 +1,11 @@
 import "./Note.css";
 
-const Note = ({ text, date, onRemoveNote, item }) => {
+const Note = ({ onRemoveNote, item }) => {
   return (
     <div className="note-container">
-      <p className="note-text">{text}</p>
+      <p className="note-text">{item.text}</p>
       <div className="note-flex-container">
-        <p>{date}</p>
+        <p>{item.date}</p>
         <button className="delete-btn" onClick={() => onRemoveNote(item.id)}>
           Delete
         </button>

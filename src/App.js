@@ -31,6 +31,7 @@ const DUMMY_DATA = [
 function App() {
   const [lightTheme, setLightTheme] = useState(true);
   const [notes, setNotes] = useState(DUMMY_DATA);
+  const [search, setSearch] = useState("");
 
   const toggleBackgroundColor = () => {
     setLightTheme(!lightTheme);
@@ -48,6 +49,14 @@ function App() {
     setNotes(newList);
   };
 
+  const searchHandler = (searchInput) => {
+    setSearch(searchInput);
+  };
+
+  const searchedList = notes.filter((note) =>
+    note.text.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div
       className="container"
@@ -57,9 +66,9 @@ function App() {
         dark={lightTheme}
         onToggleBtnHandler={toggleBackgroundColor}
       ></Header>
-      <Search></Search>
+      <Search onSearchHandler={searchHandler} />
       <NoteList
-        items={notes}
+        items={searchedList}
         onAddNote={addNoteHandler}
         onRemoveNote={removeNoteHandler}
       ></NoteList>
