@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import "./components/Header.css";
 import { v4 as uuidv4 } from "uuid";
@@ -18,7 +18,7 @@ const DUMMY_DATA = [
   },
   {
     id: uuidv4(),
-    text: "Test ",
+    text: "Test 3",
     date: "3.9.2019",
   },
   {
@@ -32,6 +32,17 @@ function App() {
   const [lightTheme, setLightTheme] = useState(true);
   const [notes, setNotes] = useState(DUMMY_DATA);
   const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem("notesData"));
+    if (data) {
+      setNotes(data);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("notesData", JSON.stringify(notes));
+  }, [notes]);
 
   const toggleBackgroundColor = () => {
     setLightTheme(!lightTheme);

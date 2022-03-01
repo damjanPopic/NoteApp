@@ -9,10 +9,21 @@ const AddNote = ({ onPassNoteData }) => {
     setNoteText(e.target.value);
   };
 
+  const getCurrentDate = (separator = ".") => {
+    let newDate = new Date();
+    let date = newDate.getDate();
+    let month = newDate.getMonth() + 1;
+    let year = newDate.getFullYear();
+
+    return `${date}${separator}${
+      month < 10 ? `0${month}` : `${month}`
+    }${separator}${year}`;
+  };
+
   const submitNoteDataHandler = () => {
     const newNote = {
       text: noteText,
-      date: "25.2.2022",
+      date: getCurrentDate(),
     };
 
     onPassNoteData(newNote);
@@ -20,7 +31,7 @@ const AddNote = ({ onPassNoteData }) => {
   };
 
   return (
-    <div className="add-note-container">
+    <div className="add-note-container add-note-half">
       <textarea
         rows={8}
         cols={100}

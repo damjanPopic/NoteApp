@@ -1,5 +1,5 @@
 .notes-list {
-  max-width: 100rem;
+  width: 100rem;
 
   display: grid;
   grid-gap: 1rem;
